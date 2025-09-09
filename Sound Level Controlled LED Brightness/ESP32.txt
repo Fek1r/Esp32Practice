@@ -1,0 +1,14 @@
+const int ledPin = 12;  // Или 19, если он PWM на вашей плате
+
+void setup() {
+  Serial.begin(115200);
+  pinMode(ledPin, OUTPUT);
+  analogWrite(ledPin, 0);  // Выключаем светодиод
+}
+
+void loop() {
+  if (Serial.available()) {
+    int brightness = Serial.read();  // Читаем байт яркости (0-255)
+    analogWrite(ledPin, brightness); // Устанавливаем яркость
+  }
+}
