@@ -1,0 +1,2 @@
+This program reads audio input from a microphone, calculates the sound volume, and adjusts the brightness of an LED accordingly. The louder the sound, the brighter the LED lights up.
+It communicates with an ESP32 (or Arduino) via serial connection to control the LED brightness using PWM.
